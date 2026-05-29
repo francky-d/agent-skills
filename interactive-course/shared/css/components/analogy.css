@@ -1,0 +1,28 @@
+.analogy {
+  background: color-mix(in srgb, var(--secondary) 8%, var(--bg-card));
+  border-left: 4px solid var(--secondary);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  margin: var(--space-5) 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.analogy-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.analogy-body p { margin-bottom: var(--space-2); max-width: none; }
+.analogy-body p:last-child { margin-bottom: 0; }
+.analogy-label {
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--secondary);
+  margin-bottom: var(--space-2);
+}

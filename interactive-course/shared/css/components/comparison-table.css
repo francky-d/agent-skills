@@ -1,0 +1,82 @@
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: var(--space-5) 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  font-size: 0.95rem;
+  background: var(--bg-card);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 0.9rem 1.1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  transition: background var(--transition);
+}
+
+.comparison-table thead th {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--accent) 14%, var(--bg-card)),
+    color-mix(in srgb, var(--accent) 6%, var(--bg-card))
+  );
+  font-family: var(--font-code);
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
+.comparison-table thead th + th {
+  border-left: 1px solid color-mix(in srgb, var(--accent) 18%, var(--border));
+}
+
+.comparison-table tbody tr:last-child td { border-bottom: none; }
+
+.comparison-table tbody tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--bg-hover) 60%, var(--bg-card));
+}
+
+.comparison-table tbody tr:hover td {
+  background: color-mix(in srgb, var(--accent) 10%, var(--bg-card));
+}
+
+.comparison-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--text);
+  border-left: 3px solid transparent;
+}
+.comparison-table tbody tr:hover td:first-child {
+  border-left-color: var(--accent);
+}
+
+.comparison-table code {
+  font-family: var(--font-code);
+  font-size: 0.82em;
+  background: color-mix(in srgb, var(--accent) 12%, var(--bg));
+  color: color-mix(in srgb, var(--accent) 55%, var(--text));
+  padding: 0.15em 0.45em;
+  border-radius: 5px;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  white-space: nowrap;
+}
+
+[data-theme="light"] .comparison-table code {
+  background: color-mix(in srgb, var(--accent) 8%, var(--bg-card));
+  color: color-mix(in srgb, var(--accent) 70%, var(--text));
+}
+
+@media (max-width: 600px) {
+  .comparison-table { font-size: 0.85rem; }
+  .comparison-table th,
+  .comparison-table td { padding: 0.65rem 0.6rem; }
+  .comparison-table code { white-space: normal; }
+}

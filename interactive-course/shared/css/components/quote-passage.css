@@ -1,0 +1,23 @@
+.quote {
+  background: color-mix(in srgb, var(--pink) 6%, var(--bg-card));
+  border-left: 4px solid var(--pink);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-5);
+  margin: var(--space-5) 0;
+  font-family: var(--font-display);
+  font-style: italic;
+}
+.quote-text {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--text);
+  margin-bottom: var(--space-3);
+}
+.quote-attribution {
+  font-style: normal;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+.quote-attribution::before { content: '— '; }

@@ -1,0 +1,52 @@
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text);
+  background: var(--bg);
+  transition: background var(--transition), color var(--transition);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.chapter h1 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: var(--space-4); }
+.chapter h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-top: var(--space-8); margin-bottom: var(--space-4); }
+.chapter h3 { font-size: 1.25rem; margin-top: var(--space-6); margin-bottom: var(--space-3); font-weight: 700; }
+
+.chapter p {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: var(--space-4);
+  max-width: 70ch;
+}
+
+.chapter p strong { color: var(--text); font-weight: 700; }
+
+.chapter ul,
+.chapter ol {
+  margin: 0 0 var(--space-4) 1.5rem;
+  padding-left: 0;
+}
+.chapter ul li { list-style: disc; margin-bottom: var(--space-2); color: var(--text-secondary); }
+.chapter ol li { list-style: decimal; margin-bottom: var(--space-2); color: var(--text-secondary); }
+
+.chapter a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.chapter a:hover { color: var(--accent-light); }
+
+.chapter code:not(pre code) {
+  font-family: var(--font-code);
+  font-size: 0.9em;
+  background: var(--bg-hover);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--text);
+}

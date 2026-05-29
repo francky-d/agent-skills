@@ -1,0 +1,45 @@
+.takeaways {
+  background: color-mix(in srgb, var(--success) 8%, var(--bg-card));
+  border-left: 4px solid var(--success);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  margin: var(--space-6) 0;
+}
+
+.takeaways-label {
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--success);
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.takeaways ul { margin: 0; padding: 0; }
+.takeaways li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: var(--space-3);
+  color: var(--text);
+}
+.takeaways li:last-child { margin-bottom: 0; }
+.takeaways li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: var(--success);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}

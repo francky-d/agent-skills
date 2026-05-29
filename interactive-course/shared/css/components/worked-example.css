@@ -1,0 +1,52 @@
+.worked-example {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin: var(--space-5) 0;
+  overflow: hidden;
+}
+
+.worked-example-header {
+  padding: 0.7rem var(--space-4);
+  background: var(--bg-hover);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-code);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.worked-example-body { padding: var(--space-4); }
+
+.worked-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  align-items: start;
+}
+.worked-step:last-child { margin-bottom: 0; }
+
+.worked-step-num {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.worked-step-body p { margin-bottom: 0; }
+.worked-step-cue {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-style: italic;
+}

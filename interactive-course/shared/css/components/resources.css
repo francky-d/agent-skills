@@ -1,0 +1,83 @@
+.resources { margin: var(--space-5) 0; }
+
+.resources-group {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-3);
+}
+
+.resources-group-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text);
+}
+
+.resources-list { display: flex; flex-direction: column; gap: 0.55rem; }
+.resources-list li {
+  list-style: none;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.resources-list a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.resources-list a:hover { text-decoration: underline; }
+.resources-note { color: var(--text-muted); margin-left: 0.4rem; }
+
+/* Closing-chapter advanced topics */
+.advanced-topics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+}
+.advanced-topic {
+  padding: var(--space-4);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.advanced-topic-title { font-weight: 700; margin-bottom: 0.3rem; }
+.advanced-topic-what { font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 0.5rem; }
+.advanced-topic-why {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  border-top: 1px dashed var(--border);
+  padding-top: 0.4rem;
+}
+
+/* Project suggestions */
+.next-projects { display: flex; flex-direction: column; gap: var(--space-3); margin: var(--space-5) 0; }
+.next-project {
+  padding: var(--space-4);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.next-project-title { font-weight: 700; margin-bottom: 0.5rem; }
+.next-project-meta {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+.difficulty {
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+.difficulty.easy { background: color-mix(in srgb, var(--success) 15%, var(--bg)); color: var(--success); }
+.difficulty.intermediate { background: color-mix(in srgb, var(--warning) 15%, var(--bg)); color: var(--warning); }
+.difficulty.challenging { background: color-mix(in srgb, var(--danger) 15%, var(--bg)); color: var(--danger); }
