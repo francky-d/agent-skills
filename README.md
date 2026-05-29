@@ -20,6 +20,16 @@ or Vercel.
 **Live demo:** [a Git Basics example course](./interactive-course/courses/example-course/)
 (serve `interactive-course/` over HTTP — see below).
 
+### [`commit/`](./commit/)
+
+Write **high-quality git commit messages** that follow Conventional Commits and
+explain the *why* behind a change. The skill reads the actual diff (`git status`,
+`git diff --staged`, `git log`) to understand both what changed and the project's
+existing style, then enforces **atomic commits** — splitting unrelated edits
+into separate, focused commits with imperative subjects and motivation-first
+bodies. By default it only proposes the message(s); it doesn't run `git commit`
+unless asked.
+
 ## Install a skill
 
 Pick a skill folder and copy it into the project (or user) `.claude/skills/`
@@ -29,14 +39,17 @@ directory Claude reads from.
 # Per-project
 mkdir -p my-project/.claude/skills
 cp -R interactive-course my-project/.claude/skills/
+cp -R commit             my-project/.claude/skills/
 
 # Or globally for your user
 mkdir -p ~/.claude/skills
 cp -R interactive-course ~/.claude/skills/
+cp -R commit             ~/.claude/skills/
 ```
 
 Then ask Claude something the skill is designed for — e.g. *"create an
-interactive crash course on X"* — and the matching skill activates.
+interactive crash course on X"* or *"write a commit message for these
+changes"* — and the matching skill activates.
 
 ## Run the demo locally
 
@@ -54,12 +67,13 @@ at `interactive-course/courses/example-course/`.
 
 ## Repo layout
 
-```
+```text
 skills/
 ├── README.md
 ├── LICENSE
 ├── .gitignore
-└── interactive-course/        ← the skill, self-contained
+├── commit/                    ← commit-message skill (single SKILL.md)
+└── interactive-course/        ← course-authoring skill, self-contained
     ├── SKILL.md               ← what Claude reads
     ├── references/            ← deeper docs referenced from SKILL.md
     ├── shared/                ← the rendering engine (CSS, JS, strings)
