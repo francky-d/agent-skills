@@ -1,8 +1,14 @@
-# skills
+# agent-skills
 
-A small collection of [Claude Code](https://claude.com/claude-code) skills,
-maintained as standalone, self-contained folders. Drop one into your project's
-`.claude/skills/` (or your global `~/.claude/skills/`) and Claude can use it.
+A small collection of skills for AI coding agents, maintained as standalone,
+self-contained folders. Each skill is a `SKILL.md` (plus optional supporting
+files) describing a specialized capability the agent can use.
+
+Works with any agent that reads skill folders — [Claude Code](https://claude.com/claude-code),
+the [Claude Agent SDK](https://docs.claude.com/en/api/agent-sdk/overview), and
+other clients adopting the same convention. Drop a skill into the location your
+agent reads from (e.g. `.claude/skills/` for Claude Code) and it becomes
+available.
 
 ## Skills in this repo
 
@@ -32,22 +38,23 @@ unless asked.
 
 ## Install a skill
 
-Pick a skill folder under `skills/` and copy it into the project (or user)
-`.claude/skills/` directory Claude reads from.
+Pick a skill folder under `skills/` and copy it into the directory your agent
+reads skills from. For Claude Code, that's `.claude/skills/` in the project or
+`~/.claude/skills/` globally; for other clients, check their documentation.
 
 ```bash
-# Per-project
+# Per-project (Claude Code)
 mkdir -p my-project/.claude/skills
 cp -R skills/interactive-course my-project/.claude/skills/
 cp -R skills/commit             my-project/.claude/skills/
 
-# Or globally for your user
+# Or globally for your user (Claude Code)
 mkdir -p ~/.claude/skills
 cp -R skills/interactive-course ~/.claude/skills/
 cp -R skills/commit             ~/.claude/skills/
 ```
 
-Then ask Claude something the skill is designed for — e.g. *"create an
+Then ask the agent something the skill is designed for — e.g. *"create an
 interactive crash course on X"* or *"write a commit message for these
 changes"* — and the matching skill activates.
 
