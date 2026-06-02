@@ -67,13 +67,21 @@ commit pour ces changements"* — et le skill correspondant s'active.
 ## Lancer la démo en local
 
 Les modules ES ne fonctionnent pas en `file://`, donc la démo a besoin d'un
-petit serveur HTTP. Depuis la racine du repo :
+petit serveur HTTP.
+
+**Avec Python** — depuis la racine du repo :
 
 ```bash
 cd skills/interactive-course
 python3 -m http.server 8000
 # ouvre http://localhost:8000/
 ```
+
+**Avec VS Code** — installe l'extension [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer),
+ouvre `skills/interactive-course/index.html`, puis clique sur **Go Live** dans
+la barre de statut (ou clic droit sur le fichier → *Open with Live Server*).
+Live Server démarre sur `http://127.0.0.1:5500/` et recharge automatiquement
+à chaque sauvegarde.
 
 La page catalogue est `skills/interactive-course/index.html`. Le cours
 d'exemple se trouve dans `skills/interactive-course/courses/example-course/`.

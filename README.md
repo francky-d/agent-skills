@@ -63,13 +63,19 @@ changes"* — and the matching skill activates.
 ## Run the demo locally
 
 ES modules don't work over `file://`, so the demo needs a tiny HTTP server.
-From the repo root:
+
+**With Python** — from the repo root:
 
 ```bash
 cd skills/interactive-course
 python3 -m http.server 8000
 # open http://localhost:8000/
 ```
+
+**With VS Code** — install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+extension, open `skills/interactive-course/index.html`, then click **Go Live**
+in the status bar (or right-click the file → *Open with Live Server*). Live
+Server starts on `http://127.0.0.1:5500/` and auto-reloads on save.
 
 The catalog page is `skills/interactive-course/index.html`. The example course
 lives at `skills/interactive-course/courses/example-course/`.
