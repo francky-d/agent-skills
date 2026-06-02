@@ -1,5 +1,7 @@
 # agent-skills
 
+🇫🇷 *Version française : [README_FR.md](./README_FR.md)*
+
 A small collection of skills for AI coding agents, maintained as standalone,
 self-contained folders. Each skill is a `SKILL.md` (plus optional supporting
 files) describing a specialized capability the agent can use.
